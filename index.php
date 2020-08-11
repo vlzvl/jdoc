@@ -139,17 +139,15 @@ function get_entry_name_start($entry) {
 <?php
    $start = SP_microtime();
    $entries = array();
-
    // add the source files containing JDOC entries
    $JDOC_FILES = array(
-      "D:/xampp/htdocs/VC_PROJECTS/JOLT3D/jolt3d.h"
+      "samples/jolt3d.h"
    );
    // get contents from all files, add them in a raw variable
    $data = "";
    foreach($JDOC_FILES as $file) {
       $data .= file_get_contents($file);
    }
-
    $data_size = strlen($data);
    $curpos = 0;
    while($curpos < $data_size) {
